@@ -19,7 +19,7 @@ library(doMC)
 
 registerDoMC()
 
-source("run-model.r")
+source("lib/run-model.r")
 
 history = NULL
 
