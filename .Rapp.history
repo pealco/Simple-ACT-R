@@ -1,0 +1,178 @@
+source("plots.r")
+source("plots.r")
+source("plots.r")
+source("plots.r")
+source("plots.r")
+source("plots.r")
+source("plots.r")
+source("plots.r")
+source("plots.r")
+source("plots.r")
+library(ggplot2)
+data = read.csv("all.runs.txt")
+all_plot  = ggplot(data) + #
+           geom_density(aes(model, color=condition)) + #
+           facet_grid(. ~ experiment) + #
+           scale_x_continuous(limits=c(0,100)) +#
+           labs(x = "% Error", y = "Density", colour = "Condition", title = "ACT-R modeling of BP null subjects") +#
+           theme_bw()
+print(all_plot)
+all_plot
+ggplot(data) + #
+           geom_density(aes(model, color=condition)) + #
+           facet_grid(. ~ experiment) + #
+           scale_x_continuous(limits=c(0,100)) +#
+           labs(x = "% Error", y = "Density", colour = "Condition", title = "ACT-R modeling of BP null subjects") +#
+           theme_bw()
+ggplot(data) + geom_density(aes(model, color=condition))
+ggplot(data)
+head(data)
+data
+source("plots.r")
+source("plots.r")
+source("plots.r")
+source("plots.r")
+source("plots.r")
+source("plots.r")
+source("plots.r")
+source("plots.r")
+source("plots.r")
+source("plots.r")
+source("plots.r")
+source("plots.r")
+source("plots.r")
+source("plots.r")
+source("plots.r")
+source("all-models.r"); source("plots.r")
+source("all-models.r"); source("plots.r")
+source("all-models.r"); source("plots.r")
+source("all-models.r"); source("plots.r")
+source("all-models.r"); source("plots.r")
+source("all-models.r"); source("plots.r")
+source("all-models.r"); source("plots.r")
+source("all-models.r"); source("plots.r")
+source("all-models.r"); source("plots.r")
+source("all-models.r"); source("plots.r")
+source("all-models.r"); source("plots.r")
+source("all-models.r"); source("plots.r")
+source("all-models.r"); source("plots.r")
+source("all-models.r"); source("plots.r")
+source("all-models.r"); source("plots.r")
+source("all-models.r"); source("plots.r")
+source("all-models.r"); source("plots.r")
+source("all-models.r"); source("plots.r")
+source("all-models.r"); source("plots.r")
+source("all-models.r"); source("plots.r")
+source("all-models.r"); source("plots.r")
+source("all-models.r"); source("plots.r")
+lat = read.csv("final.samples.txt")
+head(lat)
+dim(lat)
+head(melt(lat))
+head(melt(lat[-1]))
+lat.m = melt(lat[-1])
+ggplot(lat.m) + geom_density(aes(value, color = variable))
+ggplot(lat.m) + geom_density(aes(value, size = variable))
+ggplot(lat.m) + geom_density(aes(value, linetype = variable))
+ggplot(lat.m) + geom_density(aes(value, color = variable))
+ggplot(subset(lat.m, variable %in% c("V1", "V2", "V3", "V4")) + geom_density(aes(value, color = variable))
+ggplot(subset(lat.m, variable %in% c("V1", "V2", "V3", "V4"))) + geom_density(aes(value, color = variable))
+seq(-1, 0, 0.25)
+cond.gp = subset(lat.m, variable %in% c("V1", "V5", "V9",  "V13", "V17"))#
+cond.gp$variable = cond.gp$variable[drop=T]#
+cond.gs = subset(lat.m, variable %in% c("V2", "V6", "V10",  "V14", "V18"))#
+cond.gs$variable = cond.gs$variable[drop=T]#
+cond.up = subset(lat.m, variable %in% c("V3", "V7", "V11",  "V15", "V19"))#
+cond.up$variable = cond.up$variable[drop=T]#
+cond.us = subset(lat.m, variable %in% c("V4", "V8", "V12",  "V16", "V20"))#
+cond.us$variable = cond.us$variable[drop=T]
+ggplot(cond.gp) + geom_density(aes(value, color = variable))
+ggplot(cond.gs) + geom_density(aes(value, color = variable))
+ggplot(cond.up) + geom_density(aes(value, color = variable))
+subset(lat.m, variable %in% c("V1", "V5", "V9",  "V13", "V17"))
+head(data.frame("gp", subset(lat.m, variable %in% c("V1", "V5", "V9",  "V13", "V17"))))
+head(data.frame(condition="gp", subset(lat.m, variable %in% c("V1", "V5", "V9",  "V13", "V17"))))
+cond.gp = subset(lat.m, variable %in% c("V1", "V5", "V9",  "V13", "V17"))#
+cond.gp = data.frame(condition="gp", subset(lat.m, variable %in% c("V1", "V5", "V9",  "V13", "V17")))#
+cond.gp$variable = cond.gp$variable[drop=T]#
+#
+cond.gs = subset(lat.m, variable %in% c("V2", "V6", "V10",  "V14", "V18"))#
+cond.gs = data.frame(condition="gs", subset(lat.m, variable %in% c("V1", "V5", "V9",  "V13", "V17")))#
+cond.gs$variable = cond.gs$variable[drop=T]#
+#
+cond.up = subset(lat.m, variable %in% c("V3", "V7", "V11",  "V15", "V19"))#
+cond.up = data.frame(condition="up", subset(lat.m, variable %in% c("V1", "V5", "V9",  "V13", "V17")))#
+cond.up$variable = cond.up$variable[drop=T]#
+#
+cond.us = subset(lat.m, variable %in% c("V4", "V8", "V12",  "V16", "V20"))#
+cond.us = data.frame(condition="us", subset(lat.m, variable %in% c("V1", "V5", "V9",  "V13", "V17")))#
+cond.us$variable = cond.us$variable[drop=T]#
+#
+latency = rbind(cond.gp, cond.gs, cond.up, cond.us)
+summary(latency)
+head(data.frame(latency, params=1:5))
+latency = data.frame(latency, params=1:5)
+ggplot(latency) + geom_density(aes(value, color=condition))
+ggplot(latency) + geom_density(aes(value, color=condition)) + facet_grid(. ~ params)
+ggplot(latency) + geom_density(aes(value, color=params)) + facet_grid(. ~ condition)
+ggplot(latency) + geom_density(aes(value, color=condition)) + facet_grid(. ~ params)
+latency$params = factor(latency$params)
+ggplot(latency) + geom_density(aes(value, color=condition)) + facet_grid(. ~ params)
+source("plots.r")
+source("all-models.r"); source("plots.r")
+source("all-models.r"); source("plots.r")
+source("all-models.r"); source("plots.r")
+source("all-models.r"); source("plots.r")
+source("all-models.r"); source("plots.r")
+source("all-models.r"); source("plots.r")
+source("all-models.r"); source("plots.r")
+source("plots.r")
+source("all-models.r"); source("plots.r")
+source("all-models.r"); source("plots.r")
+source("all-models.r"); source("plots.r")
+source("all-models.r"); source("plots.r")
+data = read.csv("all.runs.txt")#
+#
+bpns = subset(data, experiment %in% c("BPNS_embed", "BPNS_no_embed"))#
+bpns$condition = bpns$condition[drop=T]
+bpns = subset(bpns, condition != "BAD")#
+bpns$condition = bpns$condition[drop=T]
+bpns_plot = ggplot(bpns) + #
+            geom_density(aes(model, color=condition)) + #
+            facet_grid(d ~ experiment) + #
+            scale_x_continuous(limits=c(0,100)) +#
+            labs(x = "% Error", y = "Density", colour = "Condition", title = "ACT-R modeling of BP null subjects") +#
+            theme_bw()
+print(bpns_plot)
+bpns_plot = ggplot(bpns) + #
+            geom_density(aes(model, color=condition)) + #
+            facet_grid(. ~ experiment) + #
+            scale_x_continuous(limits=c(0,100)) +#
+            labs(x = "% Error", y = "Density", colour = "Condition", title = "ACT-R modeling of BP null subjects") +#
+            theme_bw()
+print(bpns_plot)
+bpns_plot = ggplot(bpns) + #
+            geom_density(aes(model, color=condition)) + #
+            scale_x_continuous(limits=c(0,100)) +#
+            labs(x = "% Error", y = "Density", colour = "Condition", title = "ACT-R modeling of BP null subjects") +#
+            theme_bw()
+print(bpns_plot)
+source("all-models.r"); source("plots.r")
+data = read.csv("all.runs.txt")
+lat
+summary(lat)
+dim(lat)
+lat.m
+whos
+who
+ls()
+head(latency)
+ggplot(latency) + geom_density(aes(variable))
+quartz()
+quartz()
+ggplot(latency) + geom_density(aes(variable))
+ggplot(latency) + geom_hist(aes(variable))
+ggplot(latency) + geom_histogram(aes(variable))
+ggplot(latency) + geom_histogram(aes(value))
+ggplot(latency) + geom_histogram(aes(value, color=condition))
+ggplot(latency) + geom_density(aes(value, color=condition))
