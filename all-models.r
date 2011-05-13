@@ -102,7 +102,7 @@ final.samples = matrix(data=NA, nrow=default.trials, ncol=total.runs)
 
 ## Loop over all runs and run the models
 
-pdf(file="activation-plots.pdf",width=11,height=5)
+#pdf(file="output/activation-plots.pdf",width=11,height=5)
 
 all.model.results = foreach(r = 1:total.runs, .combine="rbind") %do% {
     print(paste("Executing run #",r,"of",total.runs))
@@ -137,11 +137,11 @@ all.model.results = foreach(r = 1:total.runs, .combine="rbind") %do% {
 for (r in 1:total.runs) {
     all.runs[r,]$model = all.model.results[r,]
 }
-dev.off()
+#dev.off()
 
 
-write.csv(all.runs, "all.runs.txt")
-write.csv(final.samples, "final.samples.txt")
+write.csv(all.runs, "output/all.runs.txt")
+write.csv(final.samples, "output/final.samples.txt")
 
 
 
