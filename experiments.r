@@ -6,24 +6,24 @@ bp_embed = list(
     conditions = list(
         list(
             condition = "GOOD",
-            retrievals = "NS_with_embed/bp-good-retrievals.txt",
-            items      = "NS_with_embed/bp-good-items.txt",
+            retrievals = "experiment_definitions/NS_with_embed/bp-good-retrievals.txt",
+            items      = "experiment_definitions/NS_with_embed/bp-good-items.txt",
             correct.item = 1,
             distractor.item = 2,
             critical.retrieval = 2),   # second retrieval is critical
 
         list(
             condition = "BAD",
-            retrievals = "NS_with_embed/bp-bad-retrievals.txt",
-            items      = "NS_with_embed/bp-bad-items.txt",
+            retrievals = "experiment_definitions/NS_with_embed/bp-bad-retrievals.txt",
+            items      = "experiment_definitions/NS_with_embed/bp-bad-items.txt",
             correct.item = 1,
             distractor.item = 2,
             critical.retrieval = 2),   
 
         list(
             condition = "INTERFERER",
-            retrievals = "NS_with_embed/bp-interferer-retrievals.txt",
-            items      = "NS_with_embed/bp-interferer-items.txt",
+            retrievals = "experiment_definitions/NS_with_embed/bp-interferer-retrievals.txt",
+            items      = "experiment_definitions/NS_with_embed/bp-interferer-items.txt",
             correct.item = 1,
             distractor.item = 2,
             critical.retrieval = 2)
@@ -36,24 +36,24 @@ bp_no_embed = list(
     conditions = list(
         list(
             condition = "GOOD",
-            retrievals = "NS_without_embed/bp-good-retrievals.txt",
-            items      = "NS_without_embed/bp-good-items.txt",
+            retrievals = "experiment_definitions/NS_without_embed/bp-good-retrievals.txt",
+            items      = "experiment_definitions/NS_without_embed/bp-good-items.txt",
             correct.item = 1,
             distractor.item = 2,
             critical.retrieval = 2),   # second retrieval is critical
 
         list(
             condition = "BAD",
-            retrievals = "NS_without_embed/bp-bad-retrievals.txt",
-            items      = "NS_without_embed/bp-bad-items.txt",
+            retrievals = "experiment_definitions/NS_without_embed/bp-bad-retrievals.txt",
+            items      = "experiment_definitions/NS_without_embed/bp-bad-items.txt",
             correct.item = 1,
             distractor.item = 2,
             critical.retrieval = 2),   
 
         list(
             condition = "INTERFERER",
-            retrievals = "NS_without_embed/bp-interferer-retrievals.txt",
-            items      = "NS_without_embed/bp-interferer-items.txt",
+            retrievals = "experiment_definitions/NS_without_embed/bp-interferer-retrievals.txt",
+            items      = "experiment_definitions/NS_without_embed/bp-interferer-items.txt",
             correct.item = 1,
             distractor.item = 2,
             critical.retrieval = 2)
@@ -66,32 +66,32 @@ agr_embed = list(
     conditions = list(
         list(
             condition = "GP",
-            retrievals = "agr_with_embed/agr-GP-retrievals.txt",
-            items      = "agr_with_embed/agr-GP-items.txt",
+            retrievals = "experiment_definitions/agr_with_embed/agr-GP-retrievals.txt",
+            items      = "experiment_definitions/agr_with_embed/agr-GP-items.txt",
             correct.item = 2,
             distractor.item = 1,
             critical.retrieval = 1),
 
         list(
             condition = "GS",
-            retrievals = "agr_with_embed/agr-GS-retrievals.txt",
-            items      = "agr_with_embed/agr-GS-items.txt",
+            retrievals = "experiment_definitions/agr_with_embed/agr-GS-retrievals.txt",
+            items      = "experiment_definitions/agr_with_embed/agr-GS-items.txt",
             correct.item = 2,
             distractor.item = 1,
             critical.retrieval = 1),
 
         list(
             condition = "UP",
-            retrievals = "agr_with_embed/agr-UP-retrievals.txt",
-            items      = "agr_with_embed/agr-UP-items.txt",
+            retrievals = "experiment_definitions/agr_with_embed/agr-UP-retrievals.txt",
+            items      = "experiment_definitions/agr_with_embed/agr-UP-items.txt",
             correct.item = 2,
             distractor.item = 1,
             critical.retrieval = 1),
             
         list(
             condition = "US",
-            retrievals = "agr_with_embed/agr-US-retrievals.txt",
-            items      = "agr_with_embed/agr-US-items.txt",
+            retrievals = "experiment_definitions/agr_with_embed/agr-US-retrievals.txt",
+            items      = "experiment_definitions/agr_with_embed/agr-US-items.txt",
             correct.item = 2,
             distractor.item = 1,
             critical.retrieval = 1)
@@ -105,32 +105,32 @@ agr_no_embed = list(
     conditions = list(
         list(
             condition = "GP",
-            retrievals = "agr_without_embed/agr-GP-retrievals.txt",
-            items      = "agr_without_embed/agr-GP-items.txt",
+            retrievals = "experiment_definitions/agr_without_embed/agr-GP-retrievals.txt",
+            items      = "experiment_definitions/agr_without_embed/agr-GP-items.txt",
             correct.item = 2,
             distractor.item = 1,
             critical.retrieval = 1),
 
         list(
             condition = "GS",
-            retrievals = "agr_without_embed/agr-GS-retrievals.txt",
-            items      = "agr_without_embed/agr-GS-items.txt",
+            retrievals = "experiment_definitions/agr_without_embed/agr-GS-retrievals.txt",
+            items      = "experiment_definitions/agr_without_embed/agr-GS-items.txt",
             correct.item = 2,
             distractor.item = 1,
             critical.retrieval = 1),
 
         list(
             condition = "UP",
-            retrievals = "agr_without_embed/agr-UP-retrievals.txt",
-            items      = "agr_without_embed/agr-UP-items.txt",
+            retrievals = "experiment_definitions/agr_without_embed/agr-UP-retrievals.txt",
+            items      = "experiment_definitions/agr_without_embed/agr-UP-items.txt",
             correct.item = 2,
             distractor.item = 1,
             critical.retrieval = 1),
             
         list(
             condition = "US",
-            retrievals = "agr_without_embed/agr-US-retrievals.txt",
-            items      = "agr_without_embed/agr-US-items.txt",
+            retrievals = "experiment_definitions/agr_without_embed/agr-US-retrievals.txt",
+            items      = "experiment_definitions/agr_without_embed/agr-US-items.txt",
             correct.item = 2,
             distractor.item = 1,
             critical.retrieval = 1)
